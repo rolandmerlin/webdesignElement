@@ -1,38 +1,20 @@
 <template>
-  <div class="gridExemple">
-    <span>
-      <buttonDifractVue>Test de bouton</buttonDifractVue>
-    </span>
-    <span>
-      <buttonSouligne>Test de bouton</buttonSouligne>
-    </span>
-    <span>
-      <buttonNeon>Test de bouton</buttonNeon>
-    </span>
-    <span>
-      <buttonDbl title="Test">de Bouton</buttonDbl>
-    </span>
-    <span>
-      <buttonRadius>Test de Bouton</buttonRadius>
-    </span>
-    <span>
-      <ButtonSliced>Test de bouton</ButtonSliced>
-    </span>
+  <nav>
+    <router-link to="/">Accueil</router-link>
+    <router-link to="/button">Button</router-link>
+  </nav>
+  <div>
+    <router-view></router-view>
   </div>
 </template>
 <script setup>
-import buttonDifractVue from './components/button-difract.vue'
-import buttonSouligne from './components/button-souligne.vue'
-import buttonNeon from './components/button-neon.vue'
-import buttonDbl from './components/button-dbl.vue'
-import buttonRadius from './components/button-radius.vue'
-import ButtonSliced from './components/button-sliced.vue'
+
 </script>
-<style>
-  .gridExemple {
-    @apply grid grid-cols-2 text-center;
+<style scoped>
+  nav {
+    @apply block leading-8 border-b-2 border-solid border-gray-400;
   }
-  .gridExemple>* {
-    @apply h-24 p-4;
+  a {
+    @apply inline-block px-4 py-2 w-32 text-center;
   }
 </style>
